@@ -7,9 +7,12 @@ class Heading extends StatelessWidget {
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
 
-    return Text(
-      '👋 Hi there! I\'m Md Didarul',
-      style: textTheme.headlineLarge,
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Text('👋 Hi there! I am Md Didarul', style: textTheme.headlineLarge),
+        Text('A Flutter Developer', style: textTheme.headlineSmall),
+      ],
     );
   }
 }

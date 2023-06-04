@@ -12,7 +12,6 @@ dependencies:
   flutter:
     sdk: flutter
   font_awesome_flutter: ^10.4.0
-  flutter_svg: ^2.0.6
 
 dev_dependencies:
   flutter_test:
@@ -26,3 +25,4 @@ flutter:
 
   assets:
     - assets/logo.png
+    - assets/avatar.jpg

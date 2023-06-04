@@ -10,14 +10,21 @@ class PortfolioApp extends StatelessWidget {
       home: const HomePage(),
       title: 'Portfolio of Md Didarul',
       theme: ThemeData.from(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal.shade200),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.teal.shade200,
+          brightness: Brightness.light,
+        ),
         useMaterial3: true,
       ),
       darkTheme: ThemeData.from(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal.shade900),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.teal.shade900,
+          brightness: Brightness.dark,
+        ),
         useMaterial3: true,
       ),
       themeMode: ThemeMode.system,
+      debugShowCheckedModeBanner: false,
     );
   }
 }

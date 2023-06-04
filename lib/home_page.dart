@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:personal_portfolio_web_app/heading.dart';
+import 'avatar.dart';
+import 'heading.dart';
+import 'information.dart';
 
 import 'socials.dart';
 
@@ -12,17 +14,17 @@ class HomePage extends StatelessWidget {
       key: const ValueKey('Home-Page'),
       body: SizedBox.expand(
         child: Container(
-          color: Theme.of(context).primaryColor,
           child: const Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Heading(
-                  key: ValueKey('Heading'),
-                ),
-                Socials(
-                  key: ValueKey('Socials'),
-                ),
+                Avatar(key: ValueKey('Avatar')),
+                SizedBox(height: 32),
+                Heading(key: ValueKey('Heading')),
+                SizedBox(height: 32),
+                Information(key: ValueKey('Information')),
+                SizedBox(height: 32),
+                Socials(key: ValueKey('Socials')),
               ],
             ),
           ),

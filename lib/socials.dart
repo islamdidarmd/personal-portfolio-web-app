@@ -1,56 +1,44 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import 'social_list_item.dart';
 
 class Socials extends StatelessWidget {
   const Socials({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        _SocialListItem(
-          key: ValueKey('Pub'),
-          child: Image.asset('assets/logo.png'),
-        ),
-        _SocialListItem(
-          key: ValueKey('Github'),
-          child: Icon(FontAwesomeIcons.github),
-        ),
-        _SocialListItem(
-          key: ValueKey('Medium'),
-          child: Icon(FontAwesomeIcons.medium),
-        ),
-        _SocialListItem(
-          key: ValueKey('Twitter'),
-          child: Icon(FontAwesomeIcons.twitter),
-        ),
-        _SocialListItem(
-          key: ValueKey('LinkedIn'),
-          child: Icon(FontAwesomeIcons.linkedinIn),
-        ),
-        _SocialListItem(
-          key: ValueKey('Email'),
-          child: Icon(FontAwesomeIcons.envelope),
-        ),
-        _SocialListItem(
-          key: ValueKey('StackOverflow'),
-          child: Icon(FontAwesomeIcons.stackOverflow),
-        ),
+    return SegmentedButton<int>(
+      onSelectionChanged: (index) {
+
+      },
+      segments: [
+        ButtonSegment(
+            value: 0,
+            icon: Image.asset('assets/logo.png', width: 20),
+            label: Text('pub.dev')),
+        const ButtonSegment(
+            value: 1,
+            icon: Icon(FontAwesomeIcons.linkedinIn),
+            label: Text('LinkedinIn')),
+        const ButtonSegment(
+            value: 2,
+            icon: Icon(FontAwesomeIcons.github),
+            label: Text('Github')),
+        const ButtonSegment(
+            value: 3,
+            icon: Icon(FontAwesomeIcons.medium),
+            label: Text('Medium')),
+        const ButtonSegment(
+            value: 4,
+            icon: Icon(FontAwesomeIcons.twitter),
+            label: Text('Twitter')),
+        const ButtonSegment(
+            value: 5,
+            icon: Icon(FontAwesomeIcons.stackOverflow),
+            label: Text('StackOverflow')),
       ],
+      selected: Set.of([-1]),
     );
-  }
-}
-
-class _SocialListItem extends StatelessWidget {
-  const _SocialListItem({super.key, required this.child});
-
-  final Widget child;
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(height: 32, width: 32, child: child);
   }
 }

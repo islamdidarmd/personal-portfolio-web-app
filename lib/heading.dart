@@ -10,7 +10,11 @@ class Heading extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Text('👋 Hi there! I am Md Didarul', style: textTheme.headlineLarge),
+        Text(
+          '👋 Hi there! I am Md Didarul',
+          style: textTheme.headlineLarge,
+          textAlign: TextAlign.justify,
+        ),
         Text('A Flutter Developer', style: textTheme.headlineSmall),
       ],
     );

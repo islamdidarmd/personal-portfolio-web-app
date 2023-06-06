@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:personal_portfolio_web_app/app_url_launcher.dart';
+import 'package:personal_portfolio_web_app/urls.dart';
 
 class Information extends StatelessWidget {
   const Information({super.key});
@@ -8,9 +10,19 @@ class Information extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        FilledButton.tonal(onPressed: () {}, child: Text('View Resume')),
+        FilledButton.tonal(
+          onPressed: () {
+            AppUrlLauncher.launchUrl(Urls.resume);
+          },
+          child: const Text('View Resume'),
+        ),
         const SizedBox(width: 32),
-        FilledButton.tonal(onPressed: () {}, child: Text('Say Hi')),
+        FilledButton.tonal(
+          onPressed: () {
+            AppUrlLauncher.launchUrl(Urls.contact);
+          },
+          child: const Text('Say Hi'),
+        ),
       ],
     );
   }

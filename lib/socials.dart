@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'social_list_item.dart';
 
 class Socials extends StatelessWidget {
   const Socials({super.key});
@@ -16,7 +15,7 @@ class Socials extends StatelessWidget {
         ButtonSegment(
             value: 0,
             icon: Image.asset('assets/logo.png', width: 20),
-            label: Text('pub.dev')),
+            label: const Text('pub.dev')),
         const ButtonSegment(
             value: 1,
             icon: Icon(FontAwesomeIcons.linkedinIn),
@@ -38,7 +37,7 @@ class Socials extends StatelessWidget {
             icon: Icon(FontAwesomeIcons.stackOverflow),
             label: Text('StackOverflow')),
       ],
-      selected: Set.of([-1]),
+      selected: const {-1},
     );
   }
 }

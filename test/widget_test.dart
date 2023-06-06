@@ -8,7 +8,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:personal_portfolio_web_app/main.dart';
 import 'package:personal_portfolio_web_app/portfolio_app.dart';
 
 void main() {

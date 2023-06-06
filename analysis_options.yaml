@@ -11,6 +11,7 @@ dart_code_metrics:
     - arguments-ordering:
         child-last: true
     - avoid-banned-imports: false
+    - avoid-ignoring-return-values: false
 
 linter:
   rules:

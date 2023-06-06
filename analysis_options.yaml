@@ -12,7 +12,12 @@ dart_code_metrics:
         child-last: true
     - avoid-banned-imports: false
     - avoid-ignoring-return-values: false
-
+    - no-equal-arguments:
+        ignored-parameters:
+          - height
+          - width
+          - alignment
+          - runAlignment
 linter:
   rules:
      avoid_print: true

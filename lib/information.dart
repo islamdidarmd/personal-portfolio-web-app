@@ -16,7 +16,7 @@ class Information extends StatelessWidget {
           },
           child: const Text('View Resume'),
         ),
-        const SizedBox(width: 32),
+        const SizedBox(width: 8),
         FilledButton.tonal(
           onPressed: () {
             AppUrlLauncher.launchUrl(Urls.contact);

@@ -12047,7 +12047,7 @@ pre .code {
 
 .header {
   position: relative;
-  min-height: 500px;
+  min-height: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -12061,7 +12061,7 @@ pre .code {
       -ms-flex-pack: center;
           justify-content: center;
   background-image: url(../imgs/header.jpg);
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -12172,7 +12172,7 @@ pre .code {
 }
 
 .about-img-holder {
-  margin-top: 50px;
+  margin-top: 150px;
   max-width: 400px;
   display: block; /* Use flexbox for centering */
   align-items: center; /* Vertically center the content */
